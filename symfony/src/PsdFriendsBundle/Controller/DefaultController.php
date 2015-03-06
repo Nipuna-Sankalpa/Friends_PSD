@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('PsdFriendsBundle:Default:index.html.twig');
+        return $this->render('PsdFriendsBundle:Login:login.html.twig');
     }
 }

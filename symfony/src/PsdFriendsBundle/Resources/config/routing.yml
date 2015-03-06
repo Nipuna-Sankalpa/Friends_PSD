@@ -1,6 +1,6 @@
 psd_friends_homepage:
     path:     /
-    defaults: { _controller: PsdFriendsBundle:Default:index }
+    defaults: { _controller: PsdFriendsBundle:Login:login }
     
 psd_friends_login:
     path:   /login
