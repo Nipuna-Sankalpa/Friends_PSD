@@ -1,0 +1,11 @@
+psd_friends_homepage:
+    path:     /
+    defaults: { _controller: PsdFriendsBundle:Default:index }
+    
+psd_friends_login:
+    path:   /login
+    defaults: { _controller: PsdFriendsBundle:Login:login}
+
+time_line:
+    path:     /timeLine
+    defaults: { _controller: PsdFriendsBundle:Timeline:timeLine }

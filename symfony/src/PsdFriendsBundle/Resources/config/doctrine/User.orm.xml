@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PsdFriendsBundle\Entity\User" table="user">
+    <unique-constraints>
+      <unique-constraint name="e_mail" columns="e_mail"/>
+    </unique-constraints>
+    <id name="id" type="integer" column="ID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="eMail" type="string" column="e_mail" length="50" nullable="false"/>
+    <field name="lastname" type="string" column="lastName" length="20" nullable="false"/>
+    <field name="firstname" type="string" column="firstName" length="20" nullable="false"/>
+  </entity>
+</doctrine-mapping>
