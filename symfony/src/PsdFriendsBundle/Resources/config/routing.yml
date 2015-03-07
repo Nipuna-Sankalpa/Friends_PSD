@@ -1,6 +1,6 @@
 psd_friends_homepage:
     path:     /
-    defaults: { _controller: PsdFriendsBundle:Login:login }
+    defaults: { _controller: PsdFriendsBundle:Default:index }
     
 psd_friends_login:
     path:   /login
@@ -9,3 +9,11 @@ psd_friends_login:
 time_line:
     path:     /timeLine
     defaults: { _controller: PsdFriendsBundle:Timeline:timeLine }
+
+sign_up:
+    path:     /sign_up
+    defaults: { _controller: PsdFriendsBundle:SignUP:signup }
+    
+profile:
+    path:     /profile
+    defaults: { _controller: PsdFriendsBundle:ProfileHandler:profileHandle }

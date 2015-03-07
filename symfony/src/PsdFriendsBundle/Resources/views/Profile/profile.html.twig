@@ -1,0 +1,80 @@
+{# empty Twig template #}
+{% extends "PsdFriendsBundle:Default:index.html.twig"%}
+
+{% block styleSheet%}<link href="{{asset('css/profileCustom.css')}}" rel="stylesheet">{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-2">
+            <div id="image">
+                <img src="{{asset('img/proPic.jpg')}}" alt="Profile Picture" class="profilePicFrame img-rounded">
+                
+            </div>
+            <div id="navBox" style="margin-top: 1em;">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-info">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    View Profile
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Photos</li>
+                                    <li>Friends</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Setup Profile
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Edit profile</li>
+                                    <li>Settings</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--*************************************************************************************************-->
+
+        <div class="col-md-9 col-md-offset-1">
+            <h2>Nipuna Sankalpa</h2>
+
+            <div id="personalProfile">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Personal Profile</div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+            </div>
+            
+            <div id="educationalProfile">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Educational Profile</div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

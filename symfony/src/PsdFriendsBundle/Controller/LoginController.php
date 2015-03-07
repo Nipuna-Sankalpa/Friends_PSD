@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class LoginController extends Controller
 {
-    public function loginAction(){   
+    public function loginAction(Request $req){   
         
         return $this->render('PsdFriendsBundle:Login:login.html.twig');
     }
