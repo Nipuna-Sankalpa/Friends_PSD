@@ -33,8 +33,8 @@
                 <input type="text" name="first_name" class="form-control" placeholder="First Name" data-validate="required"><br />
                 <input type="text" name="last_name" class="form-control" placeholder="Last Name" style="margin-top: 1em;" data-validate="required"><br />
                 <input type="email" name="email" class="form-control" placeholder="E-mail" style="margin-top: 1em;" data-validate="required,email"><br />
-                <input type="password" name="password" class="form-control" placeholder="Enter Password" style="margin-top: 1em;" data-validate="required,size(8,16)"><br />
-                <input id="re-password" type="password" name="re-password" class="form-control" placeholder="Re-Enter Password" style="margin-top: 1em;" data-validate="checkPW"><br />
+                <input id="password" type="password" name="password" class="form-control" placeholder="Enter Password" style="margin-top: 1em;" data-validate="required,size(8,16)"><br />
+                <input id="re-password" type="password" name="re-password" class="form-control" placeholder="Re-Enter Password" style="margin-top: 1em;" data-validate="required,checkPW"><br />
                 <button type="submit" class="btn btn-info" style="margin-top: 1em;margin-right:2em;">Sign Up</button>
             </div>
         </form>
@@ -51,10 +51,11 @@
 <script>
     $.verify.addRules({
   checkPW: function(r) {
-    var n = r.val();
+    var n = $("#password").val();;
     var temp=$("#re-password").val();
-    if(n !== temp )
-      return true;
+    if(n === temp ){
+        return true;
+    }
     return "Passwords do not match";
   }
 });
