@@ -2,6 +2,7 @@
 .navbar-default{
 /*background-color: rgba(64,153,255,1);*/
     background-color: #336699;
+    border-bottom: none;
 }
 
 .navbar-default .navbar-brand {
