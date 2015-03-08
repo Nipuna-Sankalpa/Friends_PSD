@@ -15,13 +15,6 @@
 {% block navBar%}
     <form class="navbar-form navbar-left" method="post" role="search" action="{{path('psd_friends_login')}}">
         <div class="form-group">
-
-            <!--login fail message-->
-            {% if msg%}
-                <span style="color:#FFFFFF">{{msg}} !!!!</span>
-            {% endif%} 
-            <!--login fail message-->
-
             <input name="mail" type="text" class="form-control" placeholder="Enter E-mail">
             <input name="password" type="password" style="margin-top: 2px;" class="form-control" placeholder="Enter Password">
         </div>
@@ -33,6 +26,13 @@
 
 {# insert Sign Up form#}
 {% block body%}
+    <!--login fail message-->
+            {% if msg%}
+                <div class="alert alert-danger">
+                <strong>Error!</strong> A problem has been occurred with your {{content}}.
+                </div>
+            {% endif%} 
+    <!--login fail message-->
 
     <div>
         <form id="sign_up_form" class="navbar-form navbar-right" method="post" role="search" action="{{path('sign_up')}}">

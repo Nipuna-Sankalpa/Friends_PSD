@@ -15,5 +15,5 @@ sign_up:
     defaults: { _controller: PsdFriendsBundle:SignUP:signup }
     
 profile:
-    path:     /profile
+    path:     /profile/{ID}
     defaults: { _controller: PsdFriendsBundle:ProfileHandler:profileHandle }

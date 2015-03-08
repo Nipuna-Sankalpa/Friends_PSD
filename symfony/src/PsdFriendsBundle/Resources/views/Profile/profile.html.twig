@@ -7,8 +7,8 @@
     <div class="row">
         <div class="col-md-2">
             <div id="image">
-                <img src="{{asset('img/proPic.jpg')}}" alt="Profile Picture" class="profilePicFrame img-rounded">
-                
+                <img src="{{imgPath}}" alt="Profile Picture" class="profilePicFrame img-rounded">
+
             </div>
             <div id="navBox" style="margin-top: 1em;">
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -54,22 +54,47 @@
         <!--*************************************************************************************************-->
 
         <div class="col-md-9 col-md-offset-1">
-            <h2>Nipuna Sankalpa</h2>
+            <h2>{{login.firstName}} {{login.lastName}}</h2>
 
             <div id="personalProfile">
                 <div class="panel panel-info">
-                    <div class="panel-heading">Personal Profile</div>
+                    <div class="panel-heading"><strong>Personal Profile</strong></div>
                     <div class="panel-body">
-                        Panel content
+
+                        <dl class="dl-horizontal">
+                            <dt><span class="glyphicon glyphicon-envelope"></span> E-mail :</dt>
+                            <dd>{{login.email}}</dd>
+                            <dt><span class="glyphicon glyphicon glyphicon-star" ></span> Date of Birth :</dt>
+                            <dd>{{profile.dob}}</dd>
+                            <dt><span class="glyphicon glyphicon-phone" ></span> Mobile :</dt>
+                            <dd>{{profile.mobile}}</dd>
+                            <dt><span class="glyphicon glyphicon-home" ></span> Home :</dt>
+                            <dd>{{profile.home}}</dd>
+                        </dl>
+                        
                     </div>
                 </div>
             </div>
-            
+
             <div id="educationalProfile">
                 <div class="panel panel-info">
-                    <div class="panel-heading">Educational Profile</div>
+                    <div class="panel-heading"><strong>Educational Profile</strong></div>
                     <div class="panel-body">
-                        Panel content
+                        <dl class="dl-horizontal">
+                            <dt><span class="glyphicon glyphicon-bookmark"></span> School  :</dt>
+                            <dd>{{profile.school}}</dd>
+                            <dt><span class="glyphicon glyphicon-bookmark"></span> High School  :</dt>
+                            <dd>{{profile.higherEdu}}</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <div id="aboutMe">
+                <div class="panel panel-info">
+                    <div class="panel-heading"><strong>About me</strong></div>
+                    <div class="panel-body">
+                        <p>{{profile.description}}</p>
                     </div>
                 </div>
             </div>
