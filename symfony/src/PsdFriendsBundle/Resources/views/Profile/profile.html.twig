@@ -1,15 +1,18 @@
 {# empty Twig template #}
-{% extends "PsdFriendsBundle:Default:index.html.twig"%}
+{% extends "::base.html.twig"%}
 
 {% block styleSheet%}<link href="{{asset('css/profileCustom.css')}}" rel="stylesheet">{% endblock %}
 
 {% block body %}
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-3">
+
             <div id="image">
+
                 <img src="{{imgPath}}" alt="Profile Picture" class="profilePicFrame img-rounded">
 
             </div>
+
             <div id="navBox" style="margin-top: 1em;">
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                     <div class="panel panel-info">
@@ -53,14 +56,19 @@
 
         <!--*************************************************************************************************-->
 
-        <div class="col-md-9 col-md-offset-1">
+
+        <div class="col-md-9">
             <h2>{{login.firstName}} {{login.lastName}}</h2>
 
-            <div id="personalProfile">
-                <div class="panel panel-info">
-                    <div class="panel-heading"><strong>Personal Profile</strong></div>
-                    <div class="panel-body">
+            <div class="panel-body">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#personalSection">Personal</a></li>
+                    <li><a data-toggle="tab" href="#educationSection">Education</a></li>
+                    <li><a data-toggle="tab" href="#workSection">About me</a></li>
 
+                </ul>
+                <div class="tab-content">
+                    <div id="personalSection" class="tab-pane fade in active">
                         <dl class="dl-horizontal">
                             <dt><span class="glyphicon glyphicon-envelope"></span> E-mail :</dt>
                             <dd>{{login.email}}</dd>
@@ -71,33 +79,22 @@
                             <dt><span class="glyphicon glyphicon-home" ></span> Home :</dt>
                             <dd>{{profile.home}}</dd>
                         </dl>
-                        
                     </div>
-                </div>
-            </div>
-
-            <div id="educationalProfile">
-                <div class="panel panel-info">
-                    <div class="panel-heading"><strong>Educational Profile</strong></div>
-                    <div class="panel-body">
+                    <div id="educationSection" class="tab-pane fade">
                         <dl class="dl-horizontal">
                             <dt><span class="glyphicon glyphicon-bookmark"></span> School  :</dt>
                             <dd>{{profile.school}}</dd>
                             <dt><span class="glyphicon glyphicon-bookmark"></span> High School  :</dt>
                             <dd>{{profile.higherEdu}}</dd>
                         </dl>
-                    </div>
-                </div>
-            </div>
 
-            <div id="aboutMe">
-                <div class="panel panel-info">
-                    <div class="panel-heading"><strong>About me</strong></div>
-                    <div class="panel-body">
+                    </div>
+                    <div id="workSection" class="tab-pane fade">
                         <p>{{profile.description}}</p>
                     </div>
                 </div>
             </div>
+
 
         </div>
     </div>

@@ -1,14 +1,11 @@
 {# empty Twig template #}
 
-{% extends "PsdFriendsBundle:Default:index.html.twig"%}
+{% extends "::base.html.twig"%}
 {# change backgound image#}
-{%block bodyStyle%}
-    background-image: url({{asset('img/loginBackground.jpg')}});
-{% endblock %}
 {# ============================================#}
 {% block styleSheet%}
     <link href="{{asset('css/loginCustom.css')}}" rel="stylesheet">
-    <link href="{{asset('css/parsley.css')}}" rel="stylesheet">
+
 
 {% endblock %}
 {# insert login form#}
@@ -25,16 +22,19 @@
 {# ============================================#}
 
 {# insert Sign Up form#}
+
 {% block body%}
     <!--login fail message-->
-            {% if msg%}
-                <div class="alert alert-danger">
-                <strong>Error!</strong> A problem has been occurred with your {{content}}.
-                </div>
-            {% endif%} 
+    {% if msg%}
+        <div class="alert alert-danger">
+            <strong>Error!</strong> A problem has been occurred with your {{content}}.
+        </div>
+    {% endif%} 
     <!--login fail message-->
 
-    <div>
+
+
+    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-lg-offset-2">
         <form id="sign_up_form" class="navbar-form navbar-right" method="post" role="search" action="{{path('sign_up')}}">
             <div class="form-group signUpForm">
                 <h4 style="font-size: 25px">Sign Up</h4>
